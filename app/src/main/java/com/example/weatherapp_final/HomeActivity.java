@@ -97,7 +97,7 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     public void onCityClicked(City selectedCity) {
-        // go to weather activity
+
         Intent intent = new Intent(this,WeatherActivity.class);
         intent.putExtra("city",selectedCity);
         startActivity(intent);

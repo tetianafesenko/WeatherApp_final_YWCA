@@ -29,7 +29,7 @@ public class NetworkingManager {
 
     void  getWeather(City city){
         String weatherURL1 = "https://api.openweathermap.org/data/2.5/weather?q=";
-        String weatherURL2 = "&appid=071c3ffca10be01d334505630d2c1a9c";
+        String weatherURL2 = "&appid=c2e4fc2ecc59c01639c3db539d8ff1f6";
         getDatafromURL(weatherURL1+city.city+","+city.country+weatherURL2);
     }
 
@@ -40,8 +40,7 @@ public class NetworkingManager {
             @Override
             public void run() {
                 HttpURLConnection urlConnection = null;
-                // the code here will run in a background thread
-                // do networking here
+
                 try {
                     URL url = new URL(urlString);
                     urlConnection = (HttpURLConnection) url.openConnection();

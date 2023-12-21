@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void networkingManagerCompleteWithJsonString(String jsonString) {
-        // parse json string
+
         adapter.list = JsonManager.fromJsonStringToList(jsonString);
 
         adapter.notifyDataSetChanged();

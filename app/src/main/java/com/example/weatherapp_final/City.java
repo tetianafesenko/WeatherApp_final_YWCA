@@ -31,7 +31,7 @@ public class City implements Parcelable {
 
 
     City(String fullCityString){
-        // Toronto, On, Canada would be City(Toronto, Canada)
+        // Toronto, ON, Canada would be City(Toronto, Canada)
         String state = "";
         char[] list = fullCityString.toCharArray();
         for (int i = 0 ; i<list.length; i++){

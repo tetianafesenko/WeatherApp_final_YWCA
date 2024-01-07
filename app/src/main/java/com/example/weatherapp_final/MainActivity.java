@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements
                 /// Search for the city in the networking class
                 return false;
             }
-
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public boolean onQueryTextChange(String newText) {
@@ -72,11 +71,8 @@ public class MainActivity extends AppCompatActivity implements
                 return false;
             }
         });
-
-
         return true;
     }
-
 
     @Override
     protected void onResume() {
@@ -89,10 +85,7 @@ public class MainActivity extends AppCompatActivity implements
 
         databaseManager.insertNewCity(selectedCity);
         finish();
-
     }
-
-
     @Override
     public void networkingManagerCompleteWithJsonString(String jsonString) {
 
@@ -100,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements
 
         adapter.notifyDataSetChanged();
     }
-
     @Override
     public void newtworkingMangerCompleteWithWeatherIcon(Bitmap image) {
 

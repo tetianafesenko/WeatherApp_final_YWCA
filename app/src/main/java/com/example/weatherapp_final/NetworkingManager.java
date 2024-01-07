@@ -19,8 +19,6 @@ public class NetworkingManager {
 
     NetworkingCallBackInterface listener;
 
-
-    // cities url
     String citiesAPI = "http://gd.geobytes.com/AutoCompleteCity?&q=";
 
     void getCities(String query){
@@ -32,8 +30,6 @@ public class NetworkingManager {
         String weatherURL2 = "&appid=c2e4fc2ecc59c01639c3db539d8ff1f6";
         getDatafromURL(weatherURL1+city.city+","+city.country+weatherURL2);
     }
-
-
 
     private void getDatafromURL(String urlString){
         MultithreadingManager.executorService.execute(new Runnable() {
@@ -71,7 +67,6 @@ public class NetworkingManager {
                 }finally {
                     urlConnection.disconnect();
                 }
-
 
             }
         });
